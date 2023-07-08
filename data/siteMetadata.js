@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'ko',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://blog.joonfluence.com',
+  siteUrl: 'https://joonfluence.com',
   siteRepo: 'https://github.com/joonfluence/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',

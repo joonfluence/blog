@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: 'Joonfluence Blog',
-  author: 'Joonho Yi',
+  author: 'Joon ho Yi',
   headerTitle: 'Joonfluence',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: '공부한 내용들을 정리해서 알려드립니다',
   language: 'ko',
   theme: 'system', // system, dark or light
   siteUrl: 'https://joonfluence.com',
@@ -30,14 +30,14 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '',
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
     // content security policy in the `next.config.js` file.
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
-    provider: 'giscus', // supported providers: giscus, utterances, disqus
+    provider: 'disqus', // supported providers: giscus, utterances, disqus
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/

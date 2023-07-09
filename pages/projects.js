@@ -2,6 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import NoData from '@/components/NoData'
 
 export default function Projects() {
   return (
@@ -17,6 +18,7 @@ export default function Projects() {
           </p>
         </div>
         <div className="container py-12">
+          {!projectsData.length && <NoData component="projects" />}
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (
               <Card

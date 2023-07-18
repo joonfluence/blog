@@ -3,8 +3,8 @@ title: Java를 처음 공부하는 당신에게
 date: '2023-07-10'
 tags: ['Java', 'Lecture']
 draft: false
-summary: jdk 8 vs jdk 11 vs jdk 17
-images: []
+summary: Java라는 언어가 어떤 이유로 탄생하게 됐고 JVM(Java Virtual Machine)이 어떤 원리에 의해서 동작하는지 깊이 있게 알아봅니다.
+images: ['/static/images/Java.png']
 layout: PostLayout
 canonicalUrl:
 ---

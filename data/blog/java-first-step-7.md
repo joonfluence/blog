@@ -2,7 +2,7 @@
 title: 자바 첫걸음 [7] 객체지향
 date: '2023-07-10'
 tags: ['Java', 'Lecture']
-draft: false
+draft: true
 summary: 자바 첫 걸음
 images: []
 layout: PostLayout

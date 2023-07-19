@@ -71,7 +71,7 @@ JVM의 동작 원리는 다음과 같아요. JVM은 자바 컴파일러에 의�
 
 - 메서드 영역(Method Area)
 
-메서드 영역은 JVM이 시작될 때 생성되는 메모리 영역입니다. 또 모든 쓰레드가 공유하는 영역이므로 멀티 스레드 프로그래밍을 할 때 동기화에 주의해야 하는 영역이기도 해요. 이 곳에는 `런타임 상수 풀 (Runtime Constant Pool)`이 있는데, 이 런타임 상수 풀은 각 클래스와 인터페이스의 상수, 메서드와 필드에 대한 레퍼런스 정보를 보관하는 테이블로 **JVM 동작의 가장 핵심적인 역할을 수행하는 정보를 보관**합니다. 실제 코드를 실행할 때, 메서드 영역의 런타임 상수 풀에 있는 정보를 조회하여 값을 불러와요. 또 GC(Garbage Collector)가 관리하는 메모리 영역 중 하나예요.
+메서드 영역은 JVM이 시작될 때 생성되는 메모리 영역입니다. 또 모든 쓰레드가 공유하는 영역이므로 멀티 스레드 프로그래밍을 할 때 동기화에 주의해야 하는 영역이기도 해요. 이 곳에는 `런타임 상수 풀 (Runtime Constant Pool)`이 있는데, 이 런타임 상수 풀은 각 클래스와 인터페이스의 상수, 메서드와 필드에 대한 레퍼런스 정보를 보관하는 테이블로 **JVM 동작의 가장 핵심적인 역할을 수행하는 정보를 보관**합니다. 실제 코드를 실행할 때, 메서드 영역의 런타임 상수 풀에 있는 정보를 조회하여 값을 불러와요. 또 GC(Garbage Collector)가 관리하는 메모리 영역 중 하나예요. static 메서드와 인자를 객체 생성 없이 사용할 수 있는 까닭도 공통 영역인 Method Area에서 값을 보관하기 때문이예요.
 
 - 힙 영역(Heap Area)
 
@@ -83,7 +83,7 @@ JVM의 동작 원리는 다음과 같아요. JVM은 자바 컴파일러에 의�
 
 또 이 프레임은 메서드가 하나 호출될 때마다 새로 생기고 작업이 완료되거나 예외가 생기면 종료돼요. 그리고 하나의 스택 프레임에는 LVA(Local Variable Array), OS(Operand Stack), 상수 풀 참조 주소(Reference to Constant Pool)가 존재하는데, 바이트 코드가 실행되는 과정에서 LVA에 계산 결과를 저장하고 연산 결과를 OS에 저장해요. 또 참조 주소를 확인해, 실제 메서드 값을 반환할 때 사용돼요.
 
-아래와 같은 자바 코드를 실행한 상황이라 가정해볼게요. 실행 과정을 살펴보기 위해, 디스어셈블(disassemble) 해보겠습니다. 이를 위한 명령어 `javap -v Calculation` 를 실행해보겠습니다.
+아래와 같은 자바 코드를 실행한 상황이라 가정해볼게요. 실행 과정을 살펴보기 위해, 아래 소스코드의 바이트코드를 읽어오겠습니다.
 
 ```java
 package com.example;
@@ -177,5 +177,5 @@ JIT Complier는 Interpreter의 문제를 개선하기 위해 등장했는데요,
 
 # 참고한 글
 
-[https://docs.oracle.com/javase/specs/jvms/se7/html/](https://docs.oracle.com/javase/specs/jvms/se7/html/)
+[https://docs.oracle.com/javase/specs/jvms/se7/html/](https://docs.oracle.com/javase/specs/jvms/se7/html/) <br />
 [https://d2.naver.com/helloworld/1230](https://d2.naver.com/helloworld/1230)

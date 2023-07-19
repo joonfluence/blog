@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 class MyDocument extends Document {
   render() {
+    const csp = `script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app`
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
@@ -24,6 +25,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+          <meta httpEquiv="Content-Security-Policy" content={csp} />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
           <Script src="../lib/google-analytics.js" />
         </Head>

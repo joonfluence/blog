@@ -3,7 +3,7 @@ title: 클린 아키텍처란 무엇인가?
 date: '2023-07-20'
 tags: ['Architecture']
 draft: false
-summary: Garbage Collector의 탄생 배경과 동작 원리에 관해 깊이 있게 알아봅니다.
+summary: 클린 아키텍처란 무엇인지 알아봅니다.
 images: ['/static/images/Architecture.png']
 layout: PostLayout
 canonicalUrl:
